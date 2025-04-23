@@ -1,0 +1,89 @@
+
+  /* Geral para todos os dispositivos */
+body {
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  #intro .avatar img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  #intro .bio {
+    text-align: center;
+  }
+  
+  #tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  #tags .tag img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    #intro .bio h3 {
+      font-size: 1rem;
+    }
+  
+    #tags {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #project-gallery {
+      grid-template-columns: 1fr;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Responsividade para telas muito pequenas */
+  @media (max-width: 480px) {
+    .profile-pic {
+      max-width: 150px;
+    }
+  
+    .bio h1 {
+      font-size: 1.5rem;
+    }
+  
+    .bio h3 {
+      font-size: 0.875rem;
+    }
+  
+    #tags .tag span {
+      font-size: 0.875rem;
+    }
+  
+    #projects .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
