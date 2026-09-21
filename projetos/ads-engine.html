@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ad Engine | Juan Filho</title>
+    <meta name="description" content="AI Ad Engine: gerador de anúncios com IA que valida as respostas do modelo antes de entregá-las. Projeto de Juan Filho, desenvolvedor fullstack júnior.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body class="case-page">
+    <main class="case">
+        <a class="back" href="../index.html#projects">&larr; Voltar ao portfólio</a>
+
+        <p class="subtitle">Projeto</p>
+        <h1>AI Ad Engine</h1>
+        <p class="lead">
+            Gerador de anúncios com IA que recebe um produto e um público-alvo e
+            devolve um anúncio estruturado, validando a resposta do modelo antes
+            de entregá-la.
+        </p>
+
+        <img
+            class="cover"
+            src="../assets/images/Thumbnail_Project-07.png"
+            alt="Tela de login do AI Ad Engine"
+        />
+        <p class="cover-caption text-sm">Tela de entrada da aplicação publicada.</p>
+
+        <h2>O problema</h2>
+        <p>
+            Escrever textos de anúncio na mão é demorado e varia de pessoa para
+            pessoa. Modelos de linguagem ajudam, mas as respostas são
+            imprevisíveis: muitas vêm com o JSON quebrado ou fora do formato
+            esperado.
+        </p>
+        <p>
+            O projeto resolve isso tratando a resposta do modelo como algo que
+            precisa ser <strong>verificado</strong>, e não como algo confiável
+            por padrão.
+        </p>
+
+        <h2>Como funciona</h2>
+        <ol class="steps">
+            <li><strong>Entrada:</strong> produto e público-alvo.</li>
+            <li><strong>Montagem do prompt:</strong> um prompt estruturado, pensado para gerar uma saída previsível.</li>
+            <li><strong>Chamada ao modelo:</strong> a API de inferência do HuggingFace, com novas tentativas automáticas quando a resposta falha.</li>
+            <li><strong>Extração do JSON:</strong> localiza o JSON dentro do texto devolvido pelo modelo.</li>
+            <li><strong>Validação:</strong> confere se o anúncio tem todos os campos esperados antes de aceitá-lo.</li>
+            <li><strong>Saída formatada:</strong> o anúncio validado é entregue e guardado.</li>
+        </ol>
+
+        <h2>Do script ao produto</h2>
+        <p>
+            A primeira versão era uma ferramenta de linha de comando. Depois
+            evoluiu para uma aplicação web:
+        </p>
+        <ul>
+            <li>API em <strong>Express</strong> com <strong>TypeScript</strong>;</li>
+            <li>persistência em <strong>SQLite</strong>;</li>
+            <li>contas com e-mail e senha, sessão por cookie <em>httpOnly</em> e dados isolados por usuário;</li>
+            <li>interface simples em HTML, CSS e JavaScript;</li>
+            <li>publicação na nuvem (Railway).</li>
+        </ul>
+
+        <h2>O que aprendi</h2>
+        <p>
+            O modelo gratuito que usei devolvia JSON malformado ou ausente em uma
+            parte relevante das chamadas, algo em torno de 30% a 50% nos meus
+            testes. Confiar numa única resposta não funcionava. A solução foi
+            combinar <strong>novas tentativas</strong> com uma
+            <strong>camada de validação</strong>, para que só respostas corretas
+            cheguem ao usuário.
+        </p>
+
+        <h2>Tecnologias</h2>
+        <ul class="tags">
+            <li>Node.js</li>
+            <li>TypeScript</li>
+            <li>Express</li>
+            <li>SQLite</li>
+            <li>HuggingFace Inference API</li>
+            <li>HTML, CSS e JavaScript</li>
+        </ul>
+
+        <h2>Quer ver o código?</h2>
+        <p>
+            O repositório é privado por enquanto. Se quiser ver o código ou uma
+            demonstração, é só me chamar.
+        </p>
+        <a class="contact-link" href="mailto:juan.pablo290102@gmail.com">Falar com o Juan</a>
+    </main>
+</body>
+</html>
