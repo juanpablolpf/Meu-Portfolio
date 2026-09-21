@@ -114,10 +114,10 @@
     }
   
     .cards {
-      /*grid-template-columns: repeat(3, 280px);
+      grid-template-columns: repeat(3, 280px);
       margin-top: 56px;
       text-align: left;
-      gap: 24px;*/
+      gap: 24px;
   
       .card {
         border: 2px solid var(--gray-200);
