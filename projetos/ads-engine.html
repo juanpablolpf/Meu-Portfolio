@@ -18,7 +18,8 @@
         <p class="subtitle">Projeto</p>
         <h1>AI Ad Engine</h1>
         <p class="lead">
-            Gerador de anúncios com IA que recebe um produto e um público-alvo e
+            Gerador de anúncios com IA para marketplaces: recebe os dados de um
+            produto e a plataforma de venda (Mercado Livre, Shopee ou Amazon) e
             devolve um anúncio estruturado, validando a resposta do modelo antes
             de entregá-la.
         </p>
@@ -45,12 +46,12 @@
 
         <h2>Como funciona</h2>
         <ol class="steps">
-            <li><strong>Entrada:</strong> produto e público-alvo.</li>
+            <li><strong>Entrada:</strong> nome, preço, categoria, material e diferenciais do produto, mais a plataforma de venda.</li>
             <li><strong>Montagem do prompt:</strong> um prompt estruturado, pensado para gerar uma saída previsível.</li>
             <li><strong>Chamada ao modelo:</strong> a API de inferência do HuggingFace, com novas tentativas automáticas quando a resposta falha.</li>
             <li><strong>Extração do JSON:</strong> localiza o JSON dentro do texto devolvido pelo modelo.</li>
             <li><strong>Validação:</strong> confere se o anúncio tem todos os campos esperados antes de aceitá-lo.</li>
-            <li><strong>Saída formatada:</strong> o anúncio validado é entregue e guardado.</li>
+            <li><strong>Saída formatada:</strong> título, bullets, descrição, SEO oculto, texto de frete grátis e sugestão de upsell, guardados no histórico do usuário.</li>
         </ol>
 
         <h2>Do script ao produto</h2>
