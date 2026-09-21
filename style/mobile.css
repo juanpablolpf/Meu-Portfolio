@@ -36,7 +36,12 @@
   }
 
   #intro header {
-    margin-block: 64px 48px;
+    margin-block: 96px 48px;
+  }
+
+  #intro .availability {
+    top: 24px;
+    padding: 8px 16px;
   }
 
   #intro header .bio {
