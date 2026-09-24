@@ -200,131 +200,85 @@
   </div>
 
   <script>
-    (function () {
-      var EN = {
-        "meta.title": "Juan Filho | Full-Stack Developer",
-        "meta.description": "Portfolio of Juan Filho, junior full-stack developer in Fortaleza, Brazil. Projects in HTML, CSS, JavaScript, TypeScript, React and Node.js.",
-        "nav.label": "Sections",
-        "nav.projects": "Projects",
-        "nav.skills": "Skills",
-        "nav.contact": "Contact",
-        "lang.label": "Switch language to Portuguese",
-        "hero.photo": "Photo of Juan Filho",
-        "hero.available": "Open to work",
-        "hero.title": "Junior full-stack developer. I build complete web apps, from the interface to the server.",
-        "hero.lede": "I work with HTML, CSS, JavaScript, TypeScript, React and Node.js. I learn by building, through personal and course projects, and I'm looking to grow on a tech team.",
-        "hero.seeProjects": "See projects",
-        "hero.cv": "Open résumé (PDF)",
-        "cv.href": "assets/resume-en.pdf",
-        "facts.stack": "TypeScript, React, Node.js and Express",
-        "facts.eduLabel": "Education",
-        "facts.edu": "Associate degree in Systems Analysis and Development, expected Dec 2026",
-        "facts.placeLabel": "Location",
-        "facts.place": "Fortaleza, Brazil",
-        "facts.langLabel": "Languages",
-        "facts.lang": "Portuguese (native), English (advanced)",
-        "projects.title": "Projects",
-        "projects.intro": "Two personal projects first, followed by the projects I built during courses.",
-        "pipe.in": "Input",
-        "pipe.inText": "Stainless steel thermos 1L, R$ 89.90, for Mercado Livre",
-        "pipe.s1": "Builds the prompt",
-        "pipe.s2": "Calls the model",
-        "pipe.s3": "Extracts the JSON",
-        "pipe.s4": "Validates the fields",
-        "pipe.out": "Output",
-        "pipe.o1": "Title",
-        "pipe.o3": "Description",
-        "pipe.o4": "Hidden SEO",
-        "pipe.o5": "Free shipping",
-        "ads.text": "Generates product listings for Mercado Livre, Shopee and Amazon from a product's details. The free model returned broken JSON in 30% to 50% of calls, so every response goes through retries and a validation step before it reaches the user.",
-        "ads.case": "Read the case study (in Portuguese)",
-        "ads.private": "Private code, available on request",
-        "le.alt": "Learn English home screen, with study topics and streak and XP counters",
-        "le.text": "Gamified app for learning English: 800 words across 16 topics, with phonetics and example sentences, 4 study modes, a leaderboard and achievements.",
-        "le.open": "Open the app",
-        "course.title": "Course projects",
-        "course.travelgram": "Social network where people share records of their trips.",
-        "course.news": "Homepage for a technology news portal.",
-        "course.refund": "System for requesting and tracking expense refunds.",
-        "course.zingen": "Responsive landing page for a karaoke app.",
-        "course.recipeTitle": "Recipe page",
-        "course.recipe": "Step-by-step recipe for cupcakes.",
-        "course.travelTitle": "Travel page",
-        "course.travel": "Key information for anyone planning a trip to Busan.",
-        "skills.title": "What I do",
-        "skills.front": "Responsive interfaces in React with TypeScript, or in plain HTML, CSS and JavaScript when the project calls for something light.",
-        "skills.frontProof": "Seen in: Learn English, Zingen, Travelgram",
-        "skills.back": "Node.js and Express APIs in TypeScript, user accounts with login and cookie sessions, and data in SQLite.",
-        "skills.backProof": "Seen in: AI Ad Engine",
-        "skills.shipTitle": "Shipping",
-        "skills.ship": "Version control with Git and GitHub, static sites on GitHub Pages and an API deployed on Railway.",
-        "skills.shipProof": "Seen in: every project on this page",
-        "contact.title": "Let's talk",
-        "contact.text": "I'm available for junior developer roles. The fastest way to reach me is by email or on LinkedIn.",
-        "contact.copy": "Copy email",
-        "contact.copied": "Email copied",
-        "contact.copyFail": "Select and copy",
-        "contact.cv": "Résumé",
-        "contact.cvInfo": "PDF, 2 pages",
-        "contact.fine": "Juan Filho, 2026. Built with HTML and CSS."
-      };
-      var PT = {
-        "contact.copied": "E-mail copiado",
-        "contact.copyFail": "Selecione e copie"
-      };
-
-      var metaDesc = document.querySelector('meta[name="description"]');
-      PT["meta.title"] = document.title;
-      PT["meta.description"] = metaDesc.content;
-      document.querySelectorAll("[data-i18n]").forEach(function (el) {
-        PT[el.dataset.i18n] = el.textContent.replace(/\s+/g, " ").trim();
-      });
-      document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
-        var parts = el.dataset.i18nAttr.split(":");
-        PT[parts[1]] = el.getAttribute(parts[0]);
-      });
-
-      var current = "pt";
-      function t(key) { return (current === "en" ? EN : PT)[key]; }
-
-      function apply(lang) {
-        current = lang;
-        var dict = lang === "en" ? EN : PT;
-        document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
-        document.title = dict["meta.title"];
-        metaDesc.content = dict["meta.description"];
-        document.querySelectorAll("[data-i18n]").forEach(function (el) {
-          if (dict[el.dataset.i18n] != null) el.textContent = dict[el.dataset.i18n];
-        });
-        document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
-          var parts = el.dataset.i18nAttr.split(":");
-          if (dict[parts[1]] != null) el.setAttribute(parts[0], dict[parts[1]]);
-        });
-        document.getElementById("lang").setAttribute("aria-checked", lang === "en" ? "true" : "false");
-        try { localStorage.setItem("lang", lang); } catch (e) {}
-      }
-
-      var fromUrl = new URLSearchParams(location.search).get("lang");
-      var saved = null;
-      try { saved = localStorage.getItem("lang"); } catch (e) {}
-      var start = fromUrl === "en" || fromUrl === "pt" ? fromUrl
-        : saved === "en" || saved === "pt" ? saved
-        : (navigator.language || "pt").toLowerCase().indexOf("pt") === 0 ? "pt" : "en";
-      if (start === "en") apply("en");
-
-      document.getElementById("lang").addEventListener("click", function () {
-        apply(current === "en" ? "pt" : "en");
-      });
-
-      document.getElementById("copy-email").addEventListener("click", function () {
-        var btn = this;
-        var text = document.getElementById("email").textContent;
-        function done(key) { btn.textContent = t(key); setTimeout(function () { btn.textContent = t("contact.copy"); }, 2000); }
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(text).then(function () { done("contact.copied"); }, function () { done("contact.copyFail"); });
-        } else { done("contact.copyFail"); }
-      });
-    })();
+    window.I18N_PT = { "contact.copied": "E-mail copiado", "contact.copyFail": "Selecione e copie" };
+    window.I18N_EN = {
+    "meta.title": "Juan Filho | Full-Stack Developer",
+    "meta.description": "Portfolio of Juan Filho, junior full-stack developer in Fortaleza, Brazil. Projects in HTML, CSS, JavaScript, TypeScript, React and Node.js.",
+    "nav.label": "Sections",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    "nav.contact": "Contact",
+    "lang.label": "Switch language to Portuguese",
+    "hero.photo": "Photo of Juan Filho",
+    "hero.available": "Open to work",
+    "hero.title": "Junior full-stack developer. I build complete web apps, from the interface to the server.",
+    "hero.lede": "I work with HTML, CSS, JavaScript, TypeScript, React and Node.js. I learn by building, through personal and course projects, and I'm looking to grow on a tech team.",
+    "hero.seeProjects": "See projects",
+    "hero.cv": "Open résumé (PDF)",
+    "cv.href": "assets/resume-en.pdf",
+    "facts.stack": "TypeScript, React, Node.js and Express",
+    "facts.eduLabel": "Education",
+    "facts.edu": "Associate degree in Systems Analysis and Development, expected Dec 2026",
+    "facts.placeLabel": "Location",
+    "facts.place": "Fortaleza, Brazil",
+    "facts.langLabel": "Languages",
+    "facts.lang": "Portuguese (native), English (advanced)",
+    "projects.title": "Projects",
+    "projects.intro": "Two personal projects first, followed by the projects I built during courses.",
+    "pipe.in": "Input",
+    "pipe.inText": "Stainless steel thermos 1L, R$ 89.90, for Mercado Livre",
+    "pipe.s1": "Builds the prompt",
+    "pipe.s2": "Calls the model",
+    "pipe.s3": "Extracts the JSON",
+    "pipe.s4": "Validates the fields",
+    "pipe.out": "Output",
+    "pipe.o1": "Title",
+    "pipe.o3": "Description",
+    "pipe.o4": "Hidden SEO",
+    "pipe.o5": "Free shipping",
+    "ads.text": "Generates product listings for Mercado Livre, Shopee and Amazon from a product's details. The free model returned broken JSON in 30% to 50% of calls, so every response goes through retries and a validation step before it reaches the user.",
+    "ads.case": "Read the case study",
+    "ads.private": "Private code, available on request",
+    "le.alt": "Learn English home screen, with study topics and streak and XP counters",
+    "le.text": "Gamified app for learning English: 800 words across 16 topics, with phonetics and example sentences, 4 study modes, a leaderboard and achievements.",
+    "le.open": "Open the app",
+    "course.title": "Course projects",
+    "course.travelgram": "Social network where people share records of their trips.",
+    "course.news": "Homepage for a technology news portal.",
+    "course.refund": "System for requesting and tracking expense refunds.",
+    "course.zingen": "Responsive landing page for a karaoke app.",
+    "course.recipeTitle": "Recipe page",
+    "course.recipe": "Step-by-step recipe for cupcakes.",
+    "course.travelTitle": "Travel page",
+    "course.travel": "Key information for anyone planning a trip to Busan.",
+    "skills.title": "What I do",
+    "skills.front": "Responsive interfaces in React with TypeScript, or in plain HTML, CSS and JavaScript when the project calls for something light.",
+    "skills.frontProof": "Seen in: Learn English, Zingen, Travelgram",
+    "skills.back": "Node.js and Express APIs in TypeScript, user accounts with login and cookie sessions, and data in SQLite.",
+    "skills.backProof": "Seen in: AI Ad Engine",
+    "skills.shipTitle": "Shipping",
+    "skills.ship": "Version control with Git and GitHub, static sites on GitHub Pages and an API deployed on Railway.",
+    "skills.shipProof": "Seen in: every project on this page",
+    "contact.title": "Let's talk",
+    "contact.text": "I'm available for junior developer roles. The fastest way to reach me is by email or on LinkedIn.",
+    "contact.copy": "Copy email",
+    "contact.copied": "Email copied",
+    "contact.copyFail": "Select and copy",
+    "contact.cv": "Résumé",
+    "contact.cvInfo": "PDF, 2 pages",
+    "contact.fine": "Juan Filho, 2026. Built with HTML and CSS."
+    };
+  </script>
+  <script src="script/i18n.js"></script>
+  <script>
+    document.getElementById("copy-email").addEventListener("click", function () {
+      var btn = this;
+      var text = document.getElementById("email").textContent;
+      function done(key) { btn.textContent = i18n.t(key); setTimeout(function () { btn.textContent = i18n.t("contact.copy"); }, 2000); }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function () { done("contact.copied"); }, function () { done("contact.copyFail"); });
+      } else { done("contact.copyFail"); }
+    });
   </script>
 </body>
 </html>

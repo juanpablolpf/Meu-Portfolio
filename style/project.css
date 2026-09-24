@@ -4,11 +4,17 @@
   padding: 48px 24px 96px;
 }
 
+.case-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
 .case .back {
-  display: inline-block;
   color: var(--ink-soft);
   font-size: 1rem;
-  margin-bottom: 48px;
   text-decoration: none;
 }
 

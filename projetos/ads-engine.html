@@ -13,10 +13,17 @@
 </head>
 <body class="case-page">
     <main class="case">
-        <a class="back" href="../index.html#projetos">Voltar ao portfólio</a>
+        <div class="case-top">
+            <a class="back" href="../index.html#projetos" data-i18n="back">Voltar ao portfólio</a>
+            <button type="button" class="lang" id="lang" role="switch" aria-checked="false" aria-label="Mudar idioma para inglês" data-i18n-attr="aria-label:lang.label">
+                <span class="lang-opt" aria-hidden="true">PT</span>
+                <span class="lang-opt" aria-hidden="true">EN</span>
+                <span class="lang-thumb" aria-hidden="true"></span>
+            </button>
+        </div>
 
         <h1>AI Ad Engine</h1>
-        <p class="lead">
+        <p class="lead" data-i18n="lead">
             Gerador de anúncios com IA para marketplaces: recebe os dados de um
             produto e a plataforma de venda (Mercado Livre, Shopee ou Amazon) e
             devolve um anúncio estruturado, validando a resposta do modelo antes
@@ -27,47 +34,48 @@
             class="cover"
             src="../assets/images/Thumbnail_Project-07.png"
             alt="Tela de login do AI Ad Engine"
+            data-i18n-attr="alt:cover.alt"
         />
-        <p class="cover-caption">Tela de entrada da aplicação publicada.</p>
+        <p class="cover-caption" data-i18n="cover.caption">Tela de entrada da aplicação publicada.</p>
 
-        <h2>O problema</h2>
-        <p>
+        <h2 data-i18n="problem.title">O problema</h2>
+        <p data-i18n="problem.p1">
             Escrever textos de anúncio na mão é demorado e varia de pessoa para
             pessoa. Modelos de linguagem ajudam, mas as respostas são
             imprevisíveis: muitas vêm com o JSON quebrado ou fora do formato
             esperado.
         </p>
-        <p>
+        <p data-i18n-html="problem.p2">
             O projeto resolve isso tratando a resposta do modelo como algo que
             precisa ser <strong>verificado</strong>, e não como algo confiável
             por padrão.
         </p>
 
-        <h2>Como funciona</h2>
+        <h2 data-i18n="how.title">Como funciona</h2>
         <ol class="steps">
-            <li><strong>Entrada:</strong> nome, preço, categoria, material e diferenciais do produto, mais a plataforma de venda.</li>
-            <li><strong>Montagem do prompt:</strong> um prompt estruturado, pensado para gerar uma saída previsível.</li>
-            <li><strong>Chamada ao modelo:</strong> a API de inferência do HuggingFace, com novas tentativas automáticas quando a resposta falha.</li>
-            <li><strong>Extração do JSON:</strong> localiza o JSON dentro do texto devolvido pelo modelo.</li>
-            <li><strong>Validação:</strong> confere se o anúncio tem todos os campos esperados antes de aceitá-lo.</li>
-            <li><strong>Saída formatada:</strong> título, bullets, descrição, SEO oculto, texto de frete grátis e sugestão de upsell, guardados no histórico do usuário.</li>
+            <li data-i18n-html="how.s1"><strong>Entrada:</strong> nome, preço, categoria, material e diferenciais do produto, mais a plataforma de venda.</li>
+            <li data-i18n-html="how.s2"><strong>Montagem do prompt:</strong> um prompt estruturado, pensado para gerar uma saída previsível.</li>
+            <li data-i18n-html="how.s3"><strong>Chamada ao modelo:</strong> a API de inferência do HuggingFace, com novas tentativas automáticas quando a resposta falha.</li>
+            <li data-i18n-html="how.s4"><strong>Extração do JSON:</strong> localiza o JSON dentro do texto devolvido pelo modelo.</li>
+            <li data-i18n-html="how.s5"><strong>Validação:</strong> confere se o anúncio tem todos os campos esperados antes de aceitá-lo.</li>
+            <li data-i18n-html="how.s6"><strong>Saída formatada:</strong> título, bullets, descrição, SEO oculto, texto de frete grátis e sugestão de upsell, guardados no histórico do usuário.</li>
         </ol>
 
-        <h2>Do script ao produto</h2>
-        <p>
+        <h2 data-i18n="product.title">Do script ao produto</h2>
+        <p data-i18n="product.p">
             A primeira versão era uma ferramenta de linha de comando. Depois
             evoluiu para uma aplicação web:
         </p>
         <ul>
-            <li>API em <strong>Express</strong> com <strong>TypeScript</strong>;</li>
-            <li>persistência em <strong>SQLite</strong>;</li>
-            <li>contas com e-mail e senha, sessão por cookie <em>httpOnly</em> e dados isolados por usuário;</li>
-            <li>interface simples em HTML, CSS e JavaScript;</li>
-            <li>publicação na nuvem (Railway).</li>
+            <li data-i18n-html="product.l1">API em <strong>Express</strong> com <strong>TypeScript</strong>;</li>
+            <li data-i18n-html="product.l2">persistência em <strong>SQLite</strong>;</li>
+            <li data-i18n-html="product.l3">contas com e-mail e senha, sessão por cookie <em>httpOnly</em> e dados isolados por usuário;</li>
+            <li data-i18n="product.l4">interface simples em HTML, CSS e JavaScript;</li>
+            <li data-i18n="product.l5">publicação na nuvem (Railway).</li>
         </ul>
 
-        <h2>O que aprendi</h2>
-        <p>
+        <h2 data-i18n="learned.title">O que aprendi</h2>
+        <p data-i18n-html="learned.p">
             O modelo gratuito que usei devolvia JSON malformado ou ausente em uma
             parte relevante das chamadas, algo em torno de 30% a 50% nos meus
             testes. Confiar numa única resposta não funcionava. A solução foi
@@ -76,22 +84,59 @@
             cheguem ao usuário.
         </p>
 
-        <h2>Tecnologias</h2>
+        <h2 data-i18n="tech.title">Tecnologias</h2>
         <ul class="tags">
             <li>Node.js</li>
             <li>TypeScript</li>
             <li>Express</li>
             <li>SQLite</li>
             <li>HuggingFace Inference API</li>
-            <li>HTML, CSS e JavaScript</li>
+            <li data-i18n="tech.front">HTML, CSS e JavaScript</li>
         </ul>
 
-        <h2>Quer ver o código?</h2>
-        <p>
-            O repositório é privado por enquanto. Se quiser ver o código ou uma
-            demonstração, é só me chamar.
+        <h2 data-i18n="code.title">Quer ver o código?</h2>
+        <p data-i18n="code.p">
+            O repositório é privado por enquanto. Se quiser ver o código, é só
+            me chamar.
         </p>
-        <a class="contact-link" href="mailto:juanproencaf@gmail.com">Falar com o Juan</a>
+        <a class="contact-link" href="mailto:juanproencaf@gmail.com" data-i18n="code.cta">Falar com o Juan</a>
     </main>
+
+    <script>
+        window.I18N_EN = {
+            "meta.title": "AI Ad Engine | Juan Filho",
+            "meta.description": "AI Ad Engine: an AI listing generator that validates the model's responses before delivering them. A project by Juan Filho, junior full-stack developer.",
+            "lang.label": "Switch language to Portuguese",
+            "back": "Back to portfolio",
+            "lead": "AI listing generator for marketplaces: it takes a product's details and the sales platform (Mercado Livre, Shopee or Amazon) and returns a structured listing, validating the model's response before delivering it.",
+            "cover.alt": "AI Ad Engine login screen",
+            "cover.caption": "Login screen of the deployed app.",
+            "problem.title": "The problem",
+            "problem.p1": "Writing listing copy by hand is slow and varies from person to person. Language models help, but their responses are unpredictable: many come back with broken JSON or in the wrong format.",
+            "problem.p2": "The project handles this by treating the model's response as something that has to be <strong>verified</strong>, not something to trust by default.",
+            "how.title": "How it works",
+            "how.s1": "<strong>Input:</strong> the product's name, price, category, material and key features, plus the sales platform.",
+            "how.s2": "<strong>Prompt building:</strong> a structured prompt, designed to produce predictable output.",
+            "how.s3": "<strong>Model call:</strong> the HuggingFace Inference API, with automatic retries when a response fails.",
+            "how.s4": "<strong>JSON extraction:</strong> finds the JSON inside the text the model returns.",
+            "how.s5": "<strong>Validation:</strong> checks that the listing has every expected field before accepting it.",
+            "how.s6": "<strong>Formatted output:</strong> title, bullets, description, hidden SEO, free-shipping copy and an upsell suggestion, saved to the user's history.",
+            "product.title": "From script to product",
+            "product.p": "The first version was a command-line tool. It then grew into a web application:",
+            "product.l1": "an <strong>Express</strong> API written in <strong>TypeScript</strong>;",
+            "product.l2": "persistence with <strong>SQLite</strong>;",
+            "product.l3": "email and password accounts, <em>httpOnly</em> cookie sessions and per-user data isolation;",
+            "product.l4": "a simple interface in HTML, CSS and JavaScript;",
+            "product.l5": "cloud deployment (Railway).",
+            "learned.title": "What I learned",
+            "learned.p": "The free model I used returned malformed or missing JSON in a significant share of calls, around 30% to 50% in my tests. Relying on a single response didn't work. The fix was to combine <strong>retries</strong> with a <strong>validation layer</strong>, so only correct responses reach the user.",
+            "tech.title": "Technologies",
+            "tech.front": "HTML, CSS and JavaScript",
+            "code.title": "Want to see the code?",
+            "code.p": "The repository is private for now. If you'd like to see the code, just get in touch.",
+            "code.cta": "Email Juan"
+        };
+    </script>
+    <script src="../script/i18n.js"></script>
 </body>
 </html>
