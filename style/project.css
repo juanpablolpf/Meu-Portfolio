@@ -1,130 +1,123 @@
-body.case-page {
-  background-color: var(--gray-100);
-}
-
 .case {
   max-width: 760px;
   margin: 0 auto;
-  padding: 56px 20px 96px;
-  text-align: left;
+  padding: 48px 24px 96px;
 }
 
 .case .back {
   display: inline-block;
-  color: var(--gray-400);
-  font: var(--text-md);
-  margin-bottom: 40px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin-bottom: 48px;
+  text-decoration: none;
 }
 
 .case .back:hover {
-  color: var(--blue);
-}
-
-.case .subtitle {
-  color: var(--red);
-  margin-bottom: 8px;
+  color: var(--accent);
 }
 
 .case h1 {
-  font: var(--title-lg);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
   margin-bottom: 16px;
 }
 
 .case .lead {
-  font: var(--text-md);
-  color: var(--gray-500);
-  margin-bottom: 32px;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  margin-bottom: 40px;
 }
 
 .case .cover {
-  display: block;
   width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--gray-300);
-  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin-bottom: 12px;
 }
 
 .case .cover-caption {
-  color: var(--gray-400);
-  margin-bottom: 8px;
+  color: var(--ink-soft);
+  font-size: .95rem;
 }
 
 .case h2 {
-  font: var(--title-md);
-  margin: 48px 0 16px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  margin: 56px 0 16px;
 }
 
 .case p,
 .case li {
-  font: var(--text-md);
-  color: var(--gray-500);
+  color: var(--ink-soft);
 }
 
 .case p + p {
   margin-top: 12px;
 }
 
+.case ul:not(.tags) {
+  padding-left: 1.2em;
+  margin-top: 12px;
+  display: grid;
+  gap: 4px;
+}
+
 .case strong {
-  color: var(--gray-600);
+  color: var(--ink);
 }
 
 .steps {
   list-style: none;
-  padding: 0;
   counter-reset: step;
   display: grid;
-  gap: 12px;
+  gap: 0;
+  border-top: 2px solid var(--ink);
 }
 
 .steps li {
   counter-increment: step;
-  position: relative;
-  background-color: var(--gray-200);
-  border: 1px solid var(--gray-300);
-  border-radius: 12px;
-  padding: 16px 16px 16px 60px;
+  display: grid;
+  grid-template-columns: 2.5em 1fr;
+  gap: 8px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--line);
 }
 
 .steps li::before {
   content: counter(step);
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--gray-300);
-  color: var(--red);
-  display: grid;
-  place-items: center;
-  font: var(--title-sm);
+  font-family: var(--display);
+  font-weight: 800;
+  color: var(--accent);
 }
 
 .tags {
   list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
 .tags li {
-  background-color: var(--gray-300);
+  font-size: .95rem;
+  padding: 3px 12px;
   border-radius: 999px;
-  padding: 8px 16px;
-  color: var(--gray-500);
+  background: var(--accent-wash);
+  color: var(--ink);
 }
 
 .case .contact-link {
   display: inline-block;
   margin-top: 24px;
-  background-color: var(--gray-300);
-  color: var(--gray-600);
-  font: var(--text-md);
-  border-radius: 8px;
-  padding: 16px 20px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
 }
 
 .case .contact-link:hover {
-  color: var(--blue);
+  filter: brightness(1.08);
 }
