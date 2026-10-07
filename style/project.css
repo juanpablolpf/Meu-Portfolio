@@ -1,9 +1,7 @@
-/* Página do estudo de caso: mesmo visual escuro da página inicial */
-
 .case {
   max-width: 760px;
   margin: 0 auto;
-  padding: 28px var(--gutter) 110px;
+  padding: 28px var(--margem) 110px;
 }
 
 .case-top {
@@ -43,7 +41,6 @@
 .case ul:not(.tags) { list-style: disc; padding-left: 1.2em; margin-top: 12px; display: grid; gap: 6px; }
 .case ul:not(.tags) li::marker { color: var(--tinta-3); }
 
-/* Etapas do pipeline, em ordem */
 .steps {
   counter-reset: step;
   border-top: 1px solid var(--linha);
