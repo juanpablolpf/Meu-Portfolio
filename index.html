@@ -65,10 +65,10 @@
       <p class="ticker-label" id="ticker-label" data-i18n="ticker.label">Ferramentas que uso nos projetos desta página</p>
       <div class="ticker-track">
         <ul class="ticker-row">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Git</li><li>GitHub Pages</li><li>Railway</li>
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>SQLite</li><li>Supabase</li><li>Tailwind</li><li>Vitest</li><li>Git</li><li>GitHub Pages</li><li>Render</li><li>Railway</li>
         </ul>
         <ul class="ticker-row" aria-hidden="true">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Git</li><li>GitHub Pages</li><li>Railway</li>
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>SQLite</li><li>Supabase</li><li>Tailwind</li><li>Vitest</li><li>Git</li><li>GitHub Pages</li><li>Render</li><li>Railway</li>
         </ul>
       </div>
     </section>
@@ -77,8 +77,28 @@
       <div class="section-head">
         <div class="spotlight spotlight-head" aria-hidden="true"></div>
         <h2 class="title-gradient" data-i18n="projects.title">Projetos</h2>
-        <p data-i18n="projects.intro">Dois projetos pessoais em destaque, seguidos dos projetos que fiz nos cursos.</p>
+        <p data-i18n="projects.intro">Três projetos pessoais em destaque, seguidos dos projetos que fiz nos cursos.</p>
       </div>
+
+      <article class="feature">
+        <a class="feature-visual browser" href="https://refund-web.onrender.com/">
+          <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="assets/images/Thumbnail_Project-09.png" alt="Página inicial do RefundPay, com o título O comprovante vira reembolso e um recibo aprovado de R$ 76,40" data-i18n-attr="alt:rp.alt" width="1112" height="568">
+        </a>
+        <div class="feature-text">
+          <h3>RefundPay</h3>
+          <p data-i18n="rp.text">
+            Reembolso de despesas para empresas. Começou como a API de um curso e
+            virou produto: cada empresa tem sua conta e convida a equipe por link,
+            o funcionário fotografa o comprovante pelo celular e o gestor aprova em
+            lote e exporta a planilha. API com 72 testes automatizados.
+          </p>
+          <ul class="chips">
+            <li>React</li><li>TypeScript</li><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>Supabase</li><li>Tailwind</li><li>Render</li>
+          </ul>
+          <p class="links"><a href="https://refund-web.onrender.com/" data-i18n="rp.open">Abrir o app</a><a href="https://github.com/juanpablolpf/refund_api" data-i18n="rp.code">Código da API</a><span data-i18n="rp.note">O primeiro acesso pode levar até 1 minuto (servidor gratuito)</span></p>
+        </div>
+      </article>
 
       <article class="feature">
         <div class="feature-visual pipeline" aria-hidden="true">
@@ -154,7 +174,7 @@
             <img src="assets/images/Thumbnail_Project-05.png" alt="" width="556" height="284" loading="lazy">
             <strong>Refund</strong>
           </a>
-          <p data-i18n="course.refund">Sistema para pedir e acompanhar reembolsos.</p>
+          <p data-i18n="course.refund">Primeira versão do sistema de reembolsos, que depois virou o RefundPay.</p>
         </li>
         <li>
           <a href="https://juanpablolpf.github.io/projeto-landing-page/">
@@ -189,16 +209,16 @@
         <div>
           <h3>Front-end</h3>
           <p data-i18n="skills.front">Interfaces responsivas em React com TypeScript, ou em HTML, CSS e JavaScript puros quando o projeto pede algo leve.</p>
-          <p class="proof" data-i18n="skills.frontProof">Visto em: Learn English, Zingen, Travelgram</p>
+          <p class="proof" data-i18n="skills.frontProof">Visto em: RefundPay, Learn English, Zingen</p>
         </div>
         <div>
           <h3>Back-end</h3>
-          <p data-i18n="skills.back">APIs em Node.js e Express com TypeScript, contas com login e sessão por cookie, e dados em SQLite.</p>
-          <p class="proof" data-i18n="skills.backProof">Visto em: AI Ad Engine</p>
+          <p data-i18n="skills.back">APIs em Node.js e Express com TypeScript, login com sessão ou JWT, dados em PostgreSQL ou SQLite e testes automatizados com Vitest.</p>
+          <p class="proof" data-i18n="skills.backProof">Visto em: RefundPay, AI Ad Engine</p>
         </div>
         <div>
           <h3 data-i18n="skills.shipTitle">Publicação</h3>
-          <p data-i18n="skills.ship">Versionamento com Git e GitHub, sites estáticos no GitHub Pages e API publicada no Railway.</p>
+          <p data-i18n="skills.ship">Versionamento com Git e GitHub, sites estáticos no GitHub Pages, APIs no Render e no Railway, banco e arquivos no Supabase.</p>
           <p class="proof" data-i18n="skills.shipProof">Visto em: todos os projetos desta página</p>
         </div>
       </div>
@@ -252,7 +272,7 @@
     "facts.lang": "Portuguese (native), English (advanced)",
     "ticker.label": "Tools I use in the projects on this page",
     "projects.title": "Projects",
-    "projects.intro": "Two personal projects first, followed by the projects I built during courses.",
+    "projects.intro": "Three personal projects first, followed by the projects I built during courses.",
     "pipe.in": "Input",
     "pipe.inText": "Stainless steel thermos 1L, R$ 89.90, for Mercado Livre",
     "pipe.s1": "Builds the prompt",
@@ -264,6 +284,11 @@
     "pipe.o3": "Description",
     "pipe.o4": "Hidden SEO",
     "pipe.o5": "Free shipping",
+    "rp.alt": "RefundPay home page, with the headline 'O comprovante vira reembolso' and an approved receipt for R$ 76.40",
+    "rp.text": "Expense reimbursement for companies. It started as a course API and became a product: each company has its own account and invites the team by link, employees photograph receipts on their phones, and managers approve in bulk and export a spreadsheet. The API has 72 automated tests.",
+    "rp.open": "Open the app",
+    "rp.code": "API source code",
+    "rp.note": "First load can take up to a minute (free server)",
     "ads.text": "Generates product listings for Mercado Livre, Shopee and Amazon from a product's details. The free model returned broken JSON in 30% to 50% of calls, so every response goes through retries and a validation step before it reaches the user.",
     "ads.case": "Read the case study",
     "ads.private": "Private code, available on request",
@@ -273,7 +298,7 @@
     "course.title": "Course projects",
     "course.travelgram": "Social network where people share records of their trips.",
     "course.news": "Homepage for a technology news portal.",
-    "course.refund": "System for requesting and tracking expense refunds.",
+    "course.refund": "First version of the expense refund system that later became RefundPay.",
     "course.zingen": "Responsive landing page for a karaoke app.",
     "course.recipeTitle": "Recipe page",
     "course.recipe": "Step-by-step recipe for cupcakes.",
@@ -281,11 +306,11 @@
     "course.travel": "Key information for anyone planning a trip to Busan.",
     "skills.title": "What I do",
     "skills.front": "Responsive interfaces in React with TypeScript, or in plain HTML, CSS and JavaScript when the project calls for something light.",
-    "skills.frontProof": "Seen in: Learn English, Zingen, Travelgram",
-    "skills.back": "Node.js and Express APIs in TypeScript, user accounts with login and cookie sessions, and data in SQLite.",
-    "skills.backProof": "Seen in: AI Ad Engine",
+    "skills.frontProof": "Seen in: RefundPay, Learn English, Zingen",
+    "skills.back": "Node.js and Express APIs in TypeScript, login with sessions or JWT, data in PostgreSQL or SQLite, and automated tests with Vitest.",
+    "skills.backProof": "Seen in: RefundPay, AI Ad Engine",
     "skills.shipTitle": "Shipping",
-    "skills.ship": "Version control with Git and GitHub, static sites on GitHub Pages and an API deployed on Railway.",
+    "skills.ship": "Version control with Git and GitHub, static sites on GitHub Pages, APIs on Render and Railway, database and file storage on Supabase.",
     "skills.shipProof": "Seen in: every project on this page",
     "contact.title": "Let's talk",
     "contact.text": "I'm available for junior developer roles. The fastest way to reach me is by email or on LinkedIn.",
