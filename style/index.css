@@ -239,16 +239,14 @@ h3 { color: var(--tinta); font-weight: 500; line-height: 1.25; }
 /* ---------- Projetos em destaque ---------- */
 
 .feature {
-  margin-top: 56px;
+  padding-block: 64px;
   display: grid;
   grid-template-columns: 7fr 5fr;
   gap: 48px;
   align-items: center;
 }
-.feature + .feature { margin-top: 88px; }
+.feature + .feature { border-top: 1px solid var(--linha); }
 .feature:nth-of-type(even) > :first-child { order: 2; }
-/* Print e diagrama empilhados no mesmo card */
-.feature-visuals { display: grid; gap: 14px; }
 
 .feature-visual {
   display: block;
@@ -306,7 +304,7 @@ h3 { color: var(--tinta); font-weight: 500; line-height: 1.25; }
 .flow li.check { color: var(--tinta); border-color: var(--cobalto); }
 
 /* Galeria de cursos */
-.sub { margin-top: 112px; text-align: center; font-family: var(--serifa); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.sub { margin-top: 56px; text-align: center; font-family: var(--serifa); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .gallery { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 20px; }
 .gallery a { display: grid; gap: 14px; text-decoration: none; }
 .gallery img {
@@ -392,7 +390,7 @@ h3 { color: var(--tinta); font-weight: 500; line-height: 1.25; }
   .facts { grid-template-columns: 1fr 1fr; }
   .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
   .facts div:nth-child(n + 3) { border-top: 0; }
-  .feature { grid-template-columns: 1fr; gap: 28px; }
+  .feature { grid-template-columns: 1fr; gap: 28px; padding-block: 48px; }
   .feature:nth-of-type(even) > :first-child { order: 0; }
   .gallery { grid-template-columns: 1fr 1fr; }
 }
