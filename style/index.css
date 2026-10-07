@@ -246,7 +246,9 @@ h3 { color: var(--tinta); font-weight: 500; line-height: 1.25; }
   align-items: center;
 }
 .feature + .feature { margin-top: 88px; }
-.feature:nth-of-type(even) .feature-visual { order: 2; }
+.feature:nth-of-type(even) > :first-child { order: 2; }
+/* Print e diagrama empilhados no mesmo card */
+.feature-visuals { display: grid; gap: 14px; }
 
 .feature-visual {
   display: block;
@@ -391,7 +393,7 @@ h3 { color: var(--tinta); font-weight: 500; line-height: 1.25; }
   .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
   .facts div:nth-child(n + 3) { border-top: 0; }
   .feature { grid-template-columns: 1fr; gap: 28px; }
-  .feature:nth-of-type(even) .feature-visual { order: 0; }
+  .feature:nth-of-type(even) > :first-child { order: 0; }
   .gallery { grid-template-columns: 1fr 1fr; }
 }
 
