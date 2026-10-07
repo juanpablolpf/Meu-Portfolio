@@ -5,189 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Filho | Desenvolvedor Fullstack</title>
     <meta name="description" content="Portfólio de Juan Filho, desenvolvedor fullstack júnior em Fortaleza. Projetos em HTML, CSS, JavaScript, TypeScript, React e Node.js.">
+    <meta name="theme-color" content="#000000">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-  <div class="page">
-    <header class="site-head">
+  <header class="topbar">
+    <div class="topbar-inner">
       <a class="name" href="#top">Juan Filho</a>
-      <div class="head-right">
-        <nav aria-label="Seções" data-i18n-attr="aria-label:nav.label">
-          <a href="#projetos" data-i18n="nav.projects">Projetos</a>
-          <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
-          <a href="#contato" data-i18n="nav.contact">Contato</a>
-        </nav>
-        <button type="button" class="lang" id="lang" role="switch" aria-checked="false" aria-label="Mudar idioma para inglês" data-i18n-attr="aria-label:lang.label">
-          <span class="lang-opt" aria-hidden="true">PT</span>
-          <span class="lang-opt" aria-hidden="true">EN</span>
-          <span class="lang-thumb" aria-hidden="true"></span>
-        </button>
+      <nav class="menu" aria-label="Seções" data-i18n-attr="aria-label:nav.label">
+        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
+        <a href="#contato" data-i18n="nav.contact">Contato</a>
+      </nav>
+      <button type="button" class="lang" id="lang" role="switch" aria-checked="false" aria-label="Mudar idioma para inglês" data-i18n-attr="aria-label:lang.label">
+        <span class="lang-opt" aria-hidden="true">PT</span>
+        <span class="lang-opt" aria-hidden="true">EN</span>
+        <span class="lang-thumb" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Abertura: texto à esquerda, foto com a luz girando à direita -->
+    <section class="hero">
+      <div class="hero-copy">
+        <a class="availability" href="#contato"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.available">Disponível para vagas</span></a>
+        <h1 class="title-gradient" data-i18n="hero.title">Desenvolvedor fullstack júnior. Crio aplicações web completas, da interface ao servidor.</h1>
+        <p class="lede" data-i18n="hero.lede">
+          Trabalho com HTML, CSS, JavaScript, TypeScript, React e Node.js.
+          Aprendo na prática, com projetos pessoais e de curso, e busco
+          crescer em um time de tecnologia.
+        </p>
+        <div class="actions">
+          <a class="btn-primary" href="#projetos" data-i18n="hero.seeProjects">Ver projetos</a>
+          <a class="btn-ghost" href="assets/curriculo.pdf" target="_blank" rel="noopener" data-i18n="hero.cv" data-i18n-attr="href:cv.href">Abrir currículo (PDF)</a>
+        </div>
       </div>
-    </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-main">
-          <div class="who">
-            <img class="avatar" src="assets/logo/profile.JPEG" alt="Foto de Juan Filho" data-i18n-attr="alt:hero.photo" width="64" height="64">
-            <a class="availability" href="#contato"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.available">Disponível para vagas</span></a>
-          </div>
-          <h1 data-i18n="hero.title">Desenvolvedor fullstack júnior. Crio aplicações web completas, da interface ao servidor.</h1>
-          <p class="lede" data-i18n="hero.lede">
-            Trabalho com HTML, CSS, JavaScript, TypeScript, React e Node.js.
-            Aprendo na prática, com projetos pessoais e de curso, e busco
-            crescer em um time de tecnologia.
-          </p>
-          <div class="actions">
-            <a class="btn" href="#projetos" data-i18n="hero.seeProjects">Ver projetos</a>
-            <a class="btn btn-ghost" href="assets/curriculo.pdf" target="_blank" rel="noopener" data-i18n="hero.cv" data-i18n-attr="href:cv.href">Abrir currículo (PDF)</a>
-          </div>
+      <div class="hero-object">
+        <div class="spotlight" aria-hidden="true"></div>
+        <div class="portrait">
+          <img src="assets/logo/profile.JPEG" alt="Foto de Juan Filho" data-i18n-attr="alt:hero.photo" width="320" height="320">
         </div>
+      </div>
+    </section>
 
-        <dl class="facts">
-          <div><dt>Stack</dt><dd data-i18n="facts.stack">TypeScript, React, Node.js e Express</dd></div>
-          <div><dt data-i18n="facts.eduLabel">Formação</dt><dd data-i18n="facts.edu">Análise e Desenvolvimento de Sistemas, conclusão prevista em dez/2026</dd></div>
-          <div><dt data-i18n="facts.placeLabel">Local</dt><dd data-i18n="facts.place">Fortaleza, CE</dd></div>
-          <div><dt data-i18n="facts.langLabel">Inglês</dt><dd data-i18n="facts.lang">Avançado</dd></div>
-        </dl>
-      </section>
+    <dl class="facts">
+      <div><dt>Stack</dt><dd data-i18n="facts.stack">TypeScript, React, Node.js e Express</dd></div>
+      <div><dt data-i18n="facts.eduLabel">Formação</dt><dd data-i18n="facts.edu">Análise e Desenvolvimento de Sistemas, conclusão prevista em dez/2026</dd></div>
+      <div><dt data-i18n="facts.placeLabel">Local</dt><dd data-i18n="facts.place">Fortaleza, CE</dd></div>
+      <div><dt data-i18n="facts.langLabel">Inglês</dt><dd data-i18n="facts.lang">Avançado</dd></div>
+    </dl>
 
-      <section id="projetos" class="block">
-        <h2 data-i18n="projects.title">Projetos</h2>
-        <p class="intro" data-i18n="projects.intro">Dois projetos pessoais em destaque, seguidos dos projetos que fiz nos cursos.</p>
-
-        <article class="feature">
-          <div class="feature-visual pipeline" aria-hidden="true">
-            <div class="io">
-              <span class="io-label" data-i18n="pipe.in">Entrada</span>
-              <p data-i18n="pipe.inText">Garrafa térmica inox 1L, R$ 89,90, para o Mercado Livre</p>
-            </div>
-            <ol class="flow">
-              <li data-i18n="pipe.s1">Monta o prompt</li>
-              <li data-i18n="pipe.s2">Chama o modelo</li>
-              <li data-i18n="pipe.s3">Extrai o JSON</li>
-              <li class="check" data-i18n="pipe.s4">Valida os campos</li>
-            </ol>
-            <div class="io io-out">
-              <span class="io-label" data-i18n="pipe.out">Saída</span>
-              <ul>
-                <li data-i18n="pipe.o1">Título</li><li>Bullets</li><li data-i18n="pipe.o3">Descrição</li>
-                <li data-i18n="pipe.o4">SEO oculto</li><li data-i18n="pipe.o5">Frete grátis</li><li>Upsell</li>
-              </ul>
-            </div>
-          </div>
-          <div class="feature-text">
-            <h3>AI Ad Engine</h3>
-            <p data-i18n="ads.text">
-              Gera anúncios para Mercado Livre, Shopee e Amazon a partir dos dados de
-              um produto. Como o modelo gratuito devolvia JSON quebrado em 30% a 50%
-              das chamadas, cada resposta passa por novas tentativas e por uma
-              validação antes de chegar ao usuário.
-            </p>
-            <ul class="chips">
-              <li>Node.js</li><li>TypeScript</li><li>Express</li><li>SQLite</li><li>HuggingFace</li>
-            </ul>
-            <p class="links"><a href="projetos/ads-engine.html" data-i18n="ads.case">Ler o estudo de caso</a><span data-i18n="ads.private">Código privado, disponível sob pedido</span></p>
-          </div>
-        </article>
-
-        <article class="feature">
-          <a class="feature-visual shot" href="https://juanpablolpf.github.io/LearnEnglish/">
-            <img src="assets/images/Thumbnail_Project-08.png" alt="Tela inicial do Learn English, com temas de estudo e contadores de ofensiva e XP" data-i18n-attr="alt:le.alt" width="1112" height="568">
-          </a>
-          <div class="feature-text">
-            <h3>Learn English</h3>
-            <p data-i18n="le.text">
-              App gamificado para aprender inglês: 800 palavras em 16 temas, com
-              fonética e frases de exemplo, 4 modos de estudo, ranking e conquistas.
-            </p>
-            <ul class="chips">
-              <li>React</li><li>TypeScript</li><li>GitHub Pages</li>
-            </ul>
-            <p class="links"><a href="https://juanpablolpf.github.io/LearnEnglish/" data-i18n="le.open">Abrir o app</a></p>
-          </div>
-        </article>
-
-        <h3 class="sub" data-i18n="course.title">Projetos de curso</h3>
-        <ul class="gallery">
-          <li>
-            <a href="https://juanpablolpf.github.io/projeto-travelgram-responsivo/">
-              <img src="assets/images/Thumbnail_Project-01.png" alt="" width="556" height="284" loading="lazy">
-              <strong>Travelgram</strong>
-            </a>
-            <p data-i18n="course.travelgram">Rede social onde as pessoas mostram registros das suas viagens.</p>
-          </li>
-          <li>
-            <a href="https://juanpablolpf.github.io/projeto-portal-de-noticias/">
-              <img src="assets/images/Thumbnail_Project-02.png" alt="" width="556" height="284" loading="lazy">
-              <strong>Tech News</strong>
-            </a>
-            <p data-i18n="course.news">Homepage de um portal de notícias sobre tecnologia.</p>
-          </li>
-          <li>
-            <a href="https://juanpablolpf.github.io/refund-template-main/">
-              <img src="assets/images/Thumbnail_Project-05.png" alt="" width="556" height="284" loading="lazy">
-              <strong>Refund</strong>
-            </a>
-            <p data-i18n="course.refund">Sistema para pedir e acompanhar reembolsos.</p>
-          </li>
-          <li>
-            <a href="https://juanpablolpf.github.io/projeto-landing-page/">
-              <img src="assets/images/Thumbnail_Project-04.png" alt="" width="556" height="284" loading="lazy">
-              <strong>Zingen</strong>
-            </a>
-            <p data-i18n="course.zingen">Landing page responsiva de um app de karaokê.</p>
-          </li>
-          <li>
-            <a href="https://juanpablolpf.github.io/projeto-receitas-fullstack/">
-              <img src="assets/images/Thumbnail_Project-03.png" alt="" width="556" height="284" loading="lazy">
-              <strong data-i18n="course.recipeTitle">Página de receita</strong>
-            </a>
-            <p data-i18n="course.recipe">Passo a passo de uma receita de cupcakes.</p>
-          </li>
-          <li>
-            <a href="https://juanpablolpf.github.io/desafio01-local-turistico/">
-              <img src="assets/images/Thumbnail_Project-06.png" alt="" width="556" height="284" loading="lazy">
-              <strong data-i18n="course.travelTitle">Página de turismo</strong>
-            </a>
-            <p data-i18n="course.travel">Informações para quem quer viajar para Busan.</p>
-          </li>
+    <!-- Faixa com as ferramentas -->
+    <section class="ticker" aria-labelledby="ticker-label">
+      <p class="ticker-label" id="ticker-label" data-i18n="ticker.label">Ferramentas que uso nos projetos desta página</p>
+      <div class="ticker-track">
+        <ul class="ticker-row">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Git</li><li>GitHub Pages</li><li>Railway</li>
         </ul>
-      </section>
+        <ul class="ticker-row" aria-hidden="true">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li><li>SQLite</li><li>Git</li><li>GitHub Pages</li><li>Railway</li>
+        </ul>
+      </div>
+    </section>
 
-      <section id="habilidades" class="block">
-        <h2 data-i18n="skills.title">O que eu faço</h2>
-        <div class="skills">
-          <div>
-            <h3>Front-end</h3>
-            <p data-i18n="skills.front">Interfaces responsivas em React com TypeScript, ou em HTML, CSS e JavaScript puros quando o projeto pede algo leve.</p>
-            <p class="proof" data-i18n="skills.frontProof">Visto em: Learn English, Zingen, Travelgram</p>
+    <section id="projetos" class="section">
+      <div class="section-head">
+        <div class="spotlight spotlight-head" aria-hidden="true"></div>
+        <h2 class="title-gradient" data-i18n="projects.title">Projetos</h2>
+        <p data-i18n="projects.intro">Dois projetos pessoais em destaque, seguidos dos projetos que fiz nos cursos.</p>
+      </div>
+
+      <article class="feature">
+        <div class="feature-visual pipeline" aria-hidden="true">
+          <div class="io">
+            <span class="io-label" data-i18n="pipe.in">Entrada</span>
+            <p data-i18n="pipe.inText">Garrafa térmica inox 1L, R$ 89,90, para o Mercado Livre</p>
           </div>
-          <div>
-            <h3>Back-end</h3>
-            <p data-i18n="skills.back">APIs em Node.js e Express com TypeScript, contas com login e sessão por cookie, e dados em SQLite.</p>
-            <p class="proof" data-i18n="skills.backProof">Visto em: AI Ad Engine</p>
-          </div>
-          <div>
-            <h3 data-i18n="skills.shipTitle">Publicação</h3>
-            <p data-i18n="skills.ship">Versionamento com Git e GitHub, sites estáticos no GitHub Pages e API publicada no Railway.</p>
-            <p class="proof" data-i18n="skills.shipProof">Visto em: todos os projetos desta página</p>
+          <ol class="flow">
+            <li data-i18n="pipe.s1">Monta o prompt</li>
+            <li data-i18n="pipe.s2">Chama o modelo</li>
+            <li data-i18n="pipe.s3">Extrai o JSON</li>
+            <li class="check" data-i18n="pipe.s4">Valida os campos</li>
+          </ol>
+          <div class="io io-out">
+            <span class="io-label" data-i18n="pipe.out">Saída</span>
+            <ul>
+              <li data-i18n="pipe.o1">Título</li><li>Bullets</li><li data-i18n="pipe.o3">Descrição</li>
+              <li data-i18n="pipe.o4">SEO oculto</li><li data-i18n="pipe.o5">Frete grátis</li><li>Upsell</li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer id="contato" class="block contact">
-      <div class="contact-head">
-        <h2 data-i18n="contact.title">Vamos conversar</h2>
-        <p data-i18n="contact.text">Estou disponível para vagas de desenvolvedor júnior. O jeito mais rápido de falar comigo é por e-mail ou pelo LinkedIn.</p>
-        <div class="email">
-          <a href="mailto:juanproencaf@gmail.com" id="email">juanproencaf@gmail.com</a>
-          <button type="button" class="copy" id="copy-email" data-i18n="contact.copy">Copiar e-mail</button>
+        <div class="feature-text">
+          <h3>AI Ad Engine</h3>
+          <p data-i18n="ads.text">
+            Gera anúncios para Mercado Livre, Shopee e Amazon a partir dos dados de
+            um produto. Como o modelo gratuito devolvia JSON quebrado em 30% a 50%
+            das chamadas, cada resposta passa por novas tentativas e por uma
+            validação antes de chegar ao usuário.
+          </p>
+          <ul class="chips">
+            <li>Node.js</li><li>TypeScript</li><li>Express</li><li>SQLite</li><li>HuggingFace</li>
+          </ul>
+          <p class="links"><a href="projetos/ads-engine.html" data-i18n="ads.case">Ler o estudo de caso</a><span data-i18n="ads.private">Código privado, disponível sob pedido</span></p>
         </div>
+      </article>
+
+      <article class="feature">
+        <a class="feature-visual browser" href="https://juanpablolpf.github.io/LearnEnglish/">
+          <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="assets/images/Thumbnail_Project-08.png" alt="Tela inicial do Learn English, com temas de estudo e contadores de ofensiva e XP" data-i18n-attr="alt:le.alt" width="1112" height="568">
+        </a>
+        <div class="feature-text">
+          <h3>Learn English</h3>
+          <p data-i18n="le.text">
+            App gamificado para aprender inglês: 800 palavras em 16 temas, com
+            fonética e frases de exemplo, 4 modos de estudo, ranking e conquistas.
+          </p>
+          <ul class="chips">
+            <li>React</li><li>TypeScript</li><li>GitHub Pages</li>
+          </ul>
+          <p class="links"><a href="https://juanpablolpf.github.io/LearnEnglish/" data-i18n="le.open">Abrir o app</a></p>
+        </div>
+      </article>
+
+      <h3 class="sub" data-i18n="course.title">Projetos de curso</h3>
+      <ul class="gallery">
+        <li>
+          <a href="https://juanpablolpf.github.io/projeto-travelgram-responsivo/">
+            <img src="assets/images/Thumbnail_Project-01.png" alt="" width="556" height="284" loading="lazy">
+            <strong>Travelgram</strong>
+          </a>
+          <p data-i18n="course.travelgram">Rede social onde as pessoas mostram registros das suas viagens.</p>
+        </li>
+        <li>
+          <a href="https://juanpablolpf.github.io/projeto-portal-de-noticias/">
+            <img src="assets/images/Thumbnail_Project-02.png" alt="" width="556" height="284" loading="lazy">
+            <strong>Tech News</strong>
+          </a>
+          <p data-i18n="course.news">Homepage de um portal de notícias sobre tecnologia.</p>
+        </li>
+        <li>
+          <a href="https://juanpablolpf.github.io/refund-template-main/">
+            <img src="assets/images/Thumbnail_Project-05.png" alt="" width="556" height="284" loading="lazy">
+            <strong>Refund</strong>
+          </a>
+          <p data-i18n="course.refund">Sistema para pedir e acompanhar reembolsos.</p>
+        </li>
+        <li>
+          <a href="https://juanpablolpf.github.io/projeto-landing-page/">
+            <img src="assets/images/Thumbnail_Project-04.png" alt="" width="556" height="284" loading="lazy">
+            <strong>Zingen</strong>
+          </a>
+          <p data-i18n="course.zingen">Landing page responsiva de um app de karaokê.</p>
+        </li>
+        <li>
+          <a href="https://juanpablolpf.github.io/projeto-receitas-fullstack/">
+            <img src="assets/images/Thumbnail_Project-03.png" alt="" width="556" height="284" loading="lazy">
+            <strong data-i18n="course.recipeTitle">Página de receita</strong>
+          </a>
+          <p data-i18n="course.recipe">Passo a passo de uma receita de cupcakes.</p>
+        </li>
+        <li>
+          <a href="https://juanpablolpf.github.io/desafio01-local-turistico/">
+            <img src="assets/images/Thumbnail_Project-06.png" alt="" width="556" height="284" loading="lazy">
+            <strong data-i18n="course.travelTitle">Página de turismo</strong>
+          </a>
+          <p data-i18n="course.travel">Informações para quem quer viajar para Busan.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="habilidades" class="section">
+      <div class="section-head">
+        <div class="spotlight spotlight-head" aria-hidden="true"></div>
+        <h2 class="title-gradient" data-i18n="skills.title">O que eu faço</h2>
+      </div>
+      <div class="skills">
+        <div>
+          <h3>Front-end</h3>
+          <p data-i18n="skills.front">Interfaces responsivas em React com TypeScript, ou em HTML, CSS e JavaScript puros quando o projeto pede algo leve.</p>
+          <p class="proof" data-i18n="skills.frontProof">Visto em: Learn English, Zingen, Travelgram</p>
+        </div>
+        <div>
+          <h3>Back-end</h3>
+          <p data-i18n="skills.back">APIs em Node.js e Express com TypeScript, contas com login e sessão por cookie, e dados em SQLite.</p>
+          <p class="proof" data-i18n="skills.backProof">Visto em: AI Ad Engine</p>
+        </div>
+        <div>
+          <h3 data-i18n="skills.shipTitle">Publicação</h3>
+          <p data-i18n="skills.ship">Versionamento com Git e GitHub, sites estáticos no GitHub Pages e API publicada no Railway.</p>
+          <p class="proof" data-i18n="skills.shipProof">Visto em: todos os projetos desta página</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechamento: contato -->
+    <section id="contato" class="closing">
+      <div class="spotlight spotlight-head" aria-hidden="true"></div>
+      <h2 class="title-gradient closing-title" data-i18n="contact.title">Vamos conversar</h2>
+      <p data-i18n="contact.text">Estou disponível para vagas de desenvolvedor júnior. O jeito mais rápido de falar comigo é por e-mail ou pelo LinkedIn.</p>
+      <div class="email">
+        <a href="mailto:juanproencaf@gmail.com" id="email">juanproencaf@gmail.com</a>
+        <button type="button" class="btn-primary copy" id="copy-email" data-i18n="contact.copy">Copiar e-mail</button>
       </div>
       <ul class="contact-links">
         <li><a href="https://www.linkedin.com/in/juan-pablo-lopes-de-proen%C3%A7a-filho-b3a3002a7/"><strong>LinkedIn</strong><span>Juan Pablo Lopes de Proença Filho</span></a></li>
@@ -195,9 +219,12 @@
         <li><a href="assets/curriculo.pdf" target="_blank" rel="noopener" data-i18n-attr="href:cv.href"><strong data-i18n="contact.cv">Currículo</strong><span data-i18n="contact.cvInfo">PDF, 2 páginas</span></a></li>
         <li><a href="https://www.instagram.com/juanproencaa/"><strong>Instagram</strong><span>@juanproencaa</span></a></li>
       </ul>
-      <p class="fine" data-i18n="contact.fine">Juan Filho, 2026. Feito com HTML e CSS.</p>
-    </footer>
-  </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="contact.fine">Juan Filho, 2026. Feito com HTML e CSS.</p>
+  </footer>
 
   <script>
     window.I18N_PT = { "contact.copied": "E-mail copiado", "contact.copyFail": "Selecione e copie" };
@@ -223,6 +250,7 @@
     "facts.place": "Fortaleza, Brazil",
     "facts.langLabel": "Languages",
     "facts.lang": "Portuguese (native), English (advanced)",
+    "ticker.label": "Tools I use in the projects on this page",
     "projects.title": "Projects",
     "projects.intro": "Two personal projects first, followed by the projects I built during courses.",
     "pipe.in": "Input",

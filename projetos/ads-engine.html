@@ -7,9 +7,10 @@
     <meta name="description" content="AI Ad Engine: gerador de anúncios com IA que valida as respostas do modelo antes de entregá-las. Projeto de Juan Filho, desenvolvedor fullstack júnior.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="../style/index.css">
     <link rel="stylesheet" href="../style/project.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="case-page">
     <main class="case">
@@ -22,23 +23,28 @@
             </button>
         </div>
 
-        <h1>AI Ad Engine</h1>
-        <p class="lead" data-i18n="lead">
-            Gerador de anúncios com IA para marketplaces: recebe os dados de um
-            produto e a plataforma de venda (Mercado Livre, Shopee ou Amazon) e
-            devolve um anúncio estruturado, validando a resposta do modelo antes
-            de entregá-la.
-        </p>
+        <div class="case-head">
+            <div class="spotlight spotlight-head" aria-hidden="true"></div>
+            <h1 class="title-gradient">AI Ad Engine</h1>
+            <p class="lead" data-i18n="lead">
+                Gerador de anúncios com IA para marketplaces: recebe os dados de um
+                produto e a plataforma de venda (Mercado Livre, Shopee ou Amazon) e
+                devolve um anúncio estruturado, validando a resposta do modelo antes
+                de entregá-la.
+            </p>
+        </div>
 
-        <img
-            class="cover"
-            src="../assets/images/Thumbnail_Project-07.png"
-            alt="Tela de login do AI Ad Engine"
-            data-i18n-attr="alt:cover.alt"
-        />
+        <figure class="cover">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img
+                src="../assets/images/Thumbnail_Project-07.png"
+                alt="Tela de login do AI Ad Engine"
+                data-i18n-attr="alt:cover.alt"
+            />
+        </figure>
         <p class="cover-caption" data-i18n="cover.caption">Tela de entrada da aplicação publicada.</p>
 
-        <h2 data-i18n="problem.title">O problema</h2>
+        <h2 class="title-gradient" data-i18n="problem.title">O problema</h2>
         <p data-i18n="problem.p1">
             Escrever textos de anúncio na mão é demorado e varia de pessoa para
             pessoa. Modelos de linguagem ajudam, mas as respostas são
@@ -51,7 +57,7 @@
             por padrão.
         </p>
 
-        <h2 data-i18n="how.title">Como funciona</h2>
+        <h2 class="title-gradient" data-i18n="how.title">Como funciona</h2>
         <ol class="steps">
             <li data-i18n-html="how.s1"><strong>Entrada:</strong> nome, preço, categoria, material e diferenciais do produto, mais a plataforma de venda.</li>
             <li data-i18n-html="how.s2"><strong>Montagem do prompt:</strong> um prompt estruturado, pensado para gerar uma saída previsível.</li>
@@ -61,7 +67,7 @@
             <li data-i18n-html="how.s6"><strong>Saída formatada:</strong> título, bullets, descrição, SEO oculto, texto de frete grátis e sugestão de upsell, guardados no histórico do usuário.</li>
         </ol>
 
-        <h2 data-i18n="product.title">Do script ao produto</h2>
+        <h2 class="title-gradient" data-i18n="product.title">Do script ao produto</h2>
         <p data-i18n="product.p">
             A primeira versão era uma ferramenta de linha de comando. Depois
             evoluiu para uma aplicação web:
@@ -74,7 +80,7 @@
             <li data-i18n="product.l5">publicação na nuvem (Railway).</li>
         </ul>
 
-        <h2 data-i18n="learned.title">O que aprendi</h2>
+        <h2 class="title-gradient" data-i18n="learned.title">O que aprendi</h2>
         <p data-i18n-html="learned.p">
             O modelo gratuito que usei devolvia JSON malformado ou ausente em uma
             parte relevante das chamadas, algo em torno de 30% a 50% nos meus
@@ -84,7 +90,7 @@
             cheguem ao usuário.
         </p>
 
-        <h2 data-i18n="tech.title">Tecnologias</h2>
+        <h2 class="title-gradient" data-i18n="tech.title">Tecnologias</h2>
         <ul class="tags">
             <li>Node.js</li>
             <li>TypeScript</li>
@@ -94,12 +100,12 @@
             <li data-i18n="tech.front">HTML, CSS e JavaScript</li>
         </ul>
 
-        <h2 data-i18n="code.title">Quer ver o código?</h2>
+        <h2 class="title-gradient" data-i18n="code.title">Quer ver o código?</h2>
         <p data-i18n="code.p">
             O repositório é privado por enquanto. Se quiser ver o código, é só
             me chamar.
         </p>
-        <a class="contact-link" href="mailto:juanproencaf@gmail.com" data-i18n="code.cta">Falar com o Juan</a>
+        <a class="btn-primary contact-link" href="mailto:juanproencaf@gmail.com" data-i18n="code.cta">Falar com o Juan</a>
     </main>
 
     <script>
